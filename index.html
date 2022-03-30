@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Taylor Series</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <h1>Taylor Series Expansion</h1>
+    <p>
+      The <i>rth-order</i> Taylor Series approximation to the function f(x) in
+      the neighborhood of x = c is
+    </p>
+    <span class="taylor-equation">
+      \(f(x) = f(c) + {1 \over 1!}(x - c)^1{df(c) \over dx} + {1 \over 2!}(x -
+      c)^2{d^2f(c) \over dx^2} + ... + {1\over r!}(x - c)^r{d^rf(c) \over
+      dx^r}\)
+    </span>
+
+    <div class="equation-input">
+      <h2>Add Polynomial Term</h2>
+      <div class="constant-builder">
+        <p>Constant</p>
+        <input id="constant-input" type="number" placeholder="0" />
+      </div>
+
+      <div class="poly-builder">
+        <input
+          class="coeff"
+          id="coeff-input"
+          type="number"
+          placeholder="coeff"
+        />
+        <p>\(x\)</p>
+        <input class="pow" type="number" placeholder="pow" />
+        <button id="add-poly">add</button>
+      </div>
+    </div>
+
+    <div class="equation-builder">Build your polynomial</div>
+
+    <button class="clear-builder-btn" id="clear-builder-btn">clear</button>
+
+    <div class="r-value">
+      <p>r-value</p>
+      <input id="r-value-input" type="number" placeholder="1" />
+    </div>
+    <h3>Expanded Equation</h3>
+    <div class="expanded-equation">Your equation in Taylor expanded form</div>
+
+    <button class="graph-btn" id="graph-btn">Graph it!</button>
+
+    <canvas class="graph" id="graph" height="801px" width="801px"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>
