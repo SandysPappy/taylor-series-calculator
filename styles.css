@@ -30,13 +30,15 @@ body {
   margin: 20px 0;
 }
 
-.r-value {
+.r-value,
+.c-value {
   display: flex;
   flex-direction: inline;
   align-items: center;
 }
 
-.r-value input {
+.r-value input,
+.c-value input {
   margin-left: 5px;
   width: 75px;
   height: 15px;
