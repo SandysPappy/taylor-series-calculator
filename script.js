@@ -38,6 +38,7 @@ function drawAxes() {
 function drawYAxis() {
   // move about Y axis
   for (let i = 0; i < graph.height; i = i + axes.dash_w + axes.gap) {
+    // draw dash
     ctx.beginPath();
     ctx.rect(axes.center.x, i, axes.dash_h, axes.dash_w);
     ctx.fillStyle = '#000';
@@ -49,6 +50,7 @@ function drawYAxis() {
 function drawXAxis() {
   // move about x axis
   for (let i = 0; i < graph.width; i = i + axes.dash_w + axes.gap) {
+    // draw dash
     ctx.beginPath();
     ctx.rect(i, axes.center.y, axes.dash_w, axes.dash_h);
     ctx.fillStyle = '#000';
@@ -56,5 +58,12 @@ function drawXAxis() {
     ctx.closePath();
   }
 }
+
+// takes in a string representing a valid polynomial
+// and returns the derivative of the polynomial
+function getPolynomialDerivative() {}
+
+// takes in a polynomial and returns the vaild version of the
+function drawPolynomial() {}
 
 drawAxes();
